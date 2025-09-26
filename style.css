@@ -1,0 +1,22 @@
+:root{
+    --branco--: #ffffff;
+    --preto--: #000000;
+    --azulCobalto--: #0047AB;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--branco--);
+    height: 20vh;
+    width: 100vw;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
