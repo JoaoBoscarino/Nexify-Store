@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background: linear-gradient(to top, rgb(0, 0, 0), rgb(81, 81, 81));
+}
+
 header{
     background-color: var(--preto--);
     height: 15vh;
@@ -66,15 +70,61 @@ header #div-icons-header a img:hover{
 
 /*Parte do main*/
 main{
-    border: 1px solid blue;
-    height: auto;
+    height: 200vh;
     width: 100%;
 }
 
 
 main #card-imagem{
-    height: 35vh;
+    height: 70vh;
     width: 100%;
-    border: 1px solid red;
+}
+main #card-imagem img{
+    height: 100%;
+    width: 100%;
 }
 
+
+
+/*Parte do footer*/
+
+footer{
+    height: 30vh;
+    background-color: rgb(45, 45, 45);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+footer div{
+    margin-top: -5%;
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+footer div a{
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+}
+
+footer div img{
+    height: 5vh;
+    width: auto;
+}
+
+footer hr{
+    position: absolute;
+    margin-top: 5%;
+    width: 80%;
+}
+
+footer p{
+    position: absolute;
+    margin-top: 12%;
+    font-size: 12pt;
+}
