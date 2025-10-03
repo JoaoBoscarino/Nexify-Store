@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexify Store</title>
+    <title>Login - Tela de Acesso</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Lado esquerdo com fundo azul e luas/estrelas -->
+        <div class="left-side">
+            <div class="welcome-content">
+                <h1>Olá!</h1>
+                <h2>Tenha um<br><strong>BOM DIA</strong></h2>
+            </div>
+        </div>
+        
+        <!-- Lado direito com formulário de login -->
+        <div class="right-side">
+            <div class="login-form">
+                <div class="form-header">
+                    <h3>Login</h3>
+                </div>
+                
+                <form>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#">forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    
+                    <div class="signup-link">
+                        <span>Don't have any account? </span>
+                        <a href="#">Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
