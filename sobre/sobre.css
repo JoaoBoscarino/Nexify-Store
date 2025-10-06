@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* Variáveis de Cor e Configurações Globais */
+
 :root {
     --branco--: #ffffff;
     --preto--: #000000;
@@ -158,10 +157,7 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
-=======
-/* ==============================
-   ESTILO NEXIFY STORE
-================================= */
+
 :root {
   --bg-gradient: linear-gradient(135deg, #000000, #ffffff);
   --text: #f5f5f5;            /* texto principal em branco suave */
@@ -333,4 +329,4 @@ body {
   }
 }
 
->>>>>>> fec2521bdd3f9567e435bdb4c62d17f3186cd6c1
+
