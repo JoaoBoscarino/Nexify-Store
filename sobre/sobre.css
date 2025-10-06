@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Variáveis de Cor e Configurações Globais */
 :root {
     --branco--: #ffffff;
@@ -157,3 +158,179 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
+=======
+/* ==============================
+   ESTILO NEXIFY STORE
+================================= */
+:root {
+  --bg-gradient: linear-gradient(135deg, #000000, #ffffff);
+  --text: #f5f5f5;            /* texto principal em branco suave */
+  --muted: #cccccc;           /* texto secundário em cinza claro */
+  --accent: #ffffff;          /* títulos em branco */
+  --highlight: #b3b3b3;       /* detalhes em cinza prata elegante */
+  --card-bg: rgba(255, 255, 255, 0.08); /* efeito glass dark */
+  --shadow: 0 8px 24px rgba(0,0,0,0.4);
+  font-family: "Poppins", sans-serif;
+}
+
+a
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  color: var(--text);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  max-width: 240px;
+  filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.15));
+}
+
+/* Layout */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 35px;
+}
+
+/* Valores */
+.values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.value {
+  background: var(--card-bg);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.value h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--highlight);
+}
+
+.value p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* Imagem */
+.about-image {
+  flex: 1 1 450px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border: 6px solid #fff;
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--highlight);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(230,57,70,0.3);
+}
+
+.btn:hover {
+  background: #c62839;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(230,57,70,0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    order: 2;
+  }
+  
+  .about-image {
+    order: 1;
+  }
+  
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-text h1 {
+    font-size: 28px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+  }
+}
+
+>>>>>>> fec2521bdd3f9567e435bdb4c62d17f3186cd6c1
