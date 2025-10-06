@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Tela de Acesso</title>
+    <link rel="shortcut icon" href="../img-icon/logo-icon-transparent.png" type="image/x-icon">
     <link rel="stylesheet" href="login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Nexify Store</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Lado esquerdo com fundo azul e luas/estrelas -->
-        <div class="left-side">
-            <div class="welcome-content">
-                <h1>Olá!</h1>
-                <h2>Tenha um<br><strong>BOM DIA</strong></h2>
-            </div>
+    
+    <div id="container">
+        <div id="div-esquerda">
+            <div id="div-logo"><img src="../img-icon/logo-icon-transparent.png" alt="Nexify Store"></div>
+
+            <h2>Roupas modernas e de qualidade. <br> Confira nossas novidades!</h2>
         </div>
-        
-        <!-- Lado direito com formulário de login -->
-        <div class="right-side">
-            <div class="login-form">
-                <div class="form-header">
-                    <h3>Login</h3>
+
+        <div id="div-direita">
+            <div id="campo-login">
+            <div id="lbl-login">Login</div>
+
+            <form action="">
+
+                <div class="div-inputs">
+                    <label for="username" class="lbl-input">Usuário:</label>
+                    <input type="text" id="input-usuario" name="username" required>
                 </div>
+
+                <div class="div-inputs">
+                    <label for="password" class="lbl-input">Senha:</label>
+                    <input type="password" id="input-senha" name="password" required>
+                </div>
+
+                <label id="lblEsqueceuSenha"><a href="#">Esqueceu sua senha?</a></label>
+
+                <div id="div-btnConfirmar">
+                    <button id="btn-confirmar" type="submit">Confirmar</button>
+                </div>
+
+                <label id="lblCriarConta">Não tem uma conta? <a href="#">Crie uma conta.</a></label>
                 
-                <form>
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    
-                    <div class="forgot-password">
-                        <a href="#">forgot password?</a>
-                    </div>
-                    
-                    <button type="submit" class="login-btn">Login</button>
-                    
-                    <div class="signup-link">
-                        <span>Don't have any account? </span>
-                        <a href="#">Create an account</a>
-                    </div>
-                </form>
+            </form>
+
+
             </div>
         </div>
+
+
     </div>
+    
 </body>
 </html>
