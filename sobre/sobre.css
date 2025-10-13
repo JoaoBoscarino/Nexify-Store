@@ -28,13 +28,16 @@ body {
 
 /* Header */
 header {
-    /* --- MUDANÇA AQUI --- */
-    background-color: var(--azulCobalto--); /* Fundo do header agora é azul */
+    background-color: var(--azulCobalto--);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    /* Removida a borda inferior, pois o contraste de cor já delimita a área */
+}
+
+header div a{
+    text-decoration: none;
+    color: var(--branco--);
 }
 
 header .container {
@@ -46,8 +49,7 @@ header .container {
 .logo {
     font-weight: 700;
     font-size: 1.8rem;
-    /* --- MUDANÇA AQUI --- */
-    color: var(--branco--); /* Cor do logo para branco */
+    color: var(--branco--);
 }
 
 header nav ul {
@@ -58,16 +60,14 @@ header nav ul {
 
 header nav a {
     text-decoration: none;
-    /* --- MUDANÇA AQUI --- */
-    color: var(--branco--); /* Cor dos links para branco */
+    color: var(--branco--);
     font-weight: 600;
     transition: opacity 0.3s ease;
     opacity: 0.9;
 }
 
 header nav a:hover {
-    /* --- MUDANÇA AQUI --- */
-    opacity: 1; /* Efeito hover agora aumenta o brilho */
+    opacity: 1;
 }
 
 /* Seção Sobre */
@@ -79,12 +79,12 @@ header nav a:hover {
     display: flex;
     align-items: center;
     gap: 50px;
-    flex-wrap: wrap; /* Adicionado para melhor responsividade */
+    flex-wrap: wrap;
 }
 
 .about-content {
     flex: 1;
-    min-width: 300px; /* Garante que o conteúdo não fique espremido */
+    min-width: 300px;
 }
 
 .about-content h2 {
@@ -119,35 +119,7 @@ header nav a:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Seção de Marcas */
-.brands-section {
-    background-color: var(--branco--);
-    padding: 40px 0;
-    text-align: center;
-}
 
-.brands-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.brands-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.brands-logos img {
-    height: 50px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.brands-logos img:hover {
-    opacity: 1;
-}
 
 /* Footer */
 footer {
@@ -295,38 +267,5 @@ body {
   box-shadow: 0 10px 20px rgba(230,57,70,0.4);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .about-text {
-    order: 2;
-  }
-  
-  .about-image {
-    order: 1;
-  }
-  
-  .values {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .values {
-    grid-template-columns: 1fr;
-  }
-  
-  .about-text h1 {
-    font-size: 28px;
-  }
-  
-  .about-text p {
-    font-size: 16px;
-  }
-}
 
 
