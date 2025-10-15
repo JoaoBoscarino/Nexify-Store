@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img-icon/logo-icon-transparent.png" type="image/x-icon">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cadastrar.css">
     <title>Nexify Store</title>
 </head>
 <body>
 
-     <header>
+    <header>
         <div class="menu">
             <nav>
                 <ul>
@@ -31,13 +31,13 @@
 
         <div id="div-direita">
             <div id="campo-login">
-            <div id="lbl-login">Login</div>
+            <div id="lbl-login">Cadastro</div>
 
             <form action="">
 
                 <div class="div-inputs">
                     <input type="text" id="input-usuario" name="username" required>
-                    <label for="username" class="lbl-input" id="lbl-usuario">Usuário:</label>
+                    <label for="username" class="lbl-input" id="lbl-Nome">Nome:</label>
                 </div>
 
                 <div class="div-inputs">
@@ -45,14 +45,18 @@
                     <label for="password" class="lbl-input" id="lbl-senha">Senha:</label>
                 </div>
 
-                <label id="lblEsqueceuSenha"><a href="#">Esqueceu sua senha?</a></label>
-
-                <div id="div-btnConfirmar">
-                    <button id="btn-confirmar" type="submit">Confirmar</button>
+                <div class="div-inputs">
+                    <input type="password" id="input-senha-novamente" name="password" required>
+                    <label for="password" class="lbl-input" id="lblConfirmarSenha">Confirmar Senha:</label>
                 </div>
 
-                <label id="lblCriarConta">Não tem uma conta? <a href="../cadastrar/cadastrar.html">Crie uma conta.</a></label>
+                <div id="div-btnConfirmar">
+                    <button id="btn-confirmar" type="submit">Cadastrar</button>
+                </div>
+
+                <label id="lblEntrarConta">Já tem uma conta? Faça o <a href="../Login/login.html">login</a></label>    
                 
+
             </form>
 
 
