@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -93,6 +94,146 @@ header #div-icons-header a img:hover {
     transform: scale(1.1);
 }
 
+/* ========================
+   CONTAINER DE PRODUTOS
+   ======================== */
+/* ========================
+   CONTAINER DE PRODUTOS
+   ======================== */
+.container-produtos,
+.tenis-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* ========================
+   SEÇÃO TÊNIS
+   ======================== */
+.container-tenis {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* ========================
+   CARD DE PRODUTO (ROPA E TÊNIS)
+   ======================== */
+.produto-card,
+.info-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 23%;
+    max-width: 270px;
+    min-width: 220px;
+    height: 420px; /* altura fixa para uniformidade */
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}   
+
+/* efeito hover */
+.produto-card:hover,
+.info-produtos:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================
+   CONTEÚDO INTERNO DO CARD
+   ======================== */
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;           /* ocupa o espaço disponível */
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* ========================
+   IMAGENS
+   ======================== */
+.produto-img,
+.img-produto {
+    width: auto;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* ========================
+   NOME DO PRODUTO
+   ======================== */
+.produto-nome,
+.lbl-produto {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+    margin: 5px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ========================
+   VALOR DO PRODUTO
+   ======================== */
+.produto-valor,
+.lbl-valor {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #007bff;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+/* ========================
+   BOTÕES
+   ======================== */
+.produto-btn,
+.btn-confirmar {
+    width: 90%;
+    height: 50px;
+    margin-top: auto;       /* força o botão para o final do card */
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.produto-btn:hover,
+.btn-confirmar:hover {
+    background-color: #005fcc;
+    transform: scale(1.03);
+}
 
 
 
@@ -106,7 +247,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     color: white;
-    margin-top: 50%;
+
 }
 
 footer div {

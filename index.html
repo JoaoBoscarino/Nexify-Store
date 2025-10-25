@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img-icon/logo-icon-transparent.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Nexify Store</title>
 </head>
@@ -12,26 +17,126 @@
 <body>
 
     <header>
-        <div id="div-logo-loja"> <a href="index.html"><img src="img-icon/logo-icon-transparent.png" alt="logo-loja"> </a></div><!-- Logo aqui -->
+        <div id="div-logo-loja"> <a href="index.html"><img src="img-icon/logo-icon-transparent.png" alt="logo-loja">
+            </a></div><!-- Logo aqui -->
 
         <input type="text" id="input-pesquisa" placeholder="o que você procura?">
 
-       <div id="div-icons-header">
-        <a href="Login/login.html"><img src="img-icon/perfil-icon.png" alt="icon-perfil"></a>
-        <a href="carrinho/carrinho.html"><img src="img-icon/carrinho-icon.png" alt="icon-carrinho"></a>
-        <a href="#"><img src="img-icon/mensagem-icon.png" alt="icon-mensagem"></a>
-       </div>      
+        <div id="div-icons-header">
+            <a href="Login/login.html"><img src="img-icon/perfil-icon.png" alt="icon-perfil"></a>
+            <a href="carrinho/carrinho.html"><img src="img-icon/carrinho-icon.png" alt="icon-carrinho"></a>
+            <a href="#"><img src="img-icon/mensagem-icon.png" alt="icon-mensagem"></a>
+        </div>
     </header>
 
     <div id="menu-opcoes">
         <nav>
             <a href="#">Homens</a>
             <a href="#">Mulheres</a>
-            <a href="#">Crianças</a>
-            <a href="#">Calçados</a>
             <a href="#">Roupas</a>
         </nav>
     </div>
+
+    <main class="container">
+
+        <div class="container-produtos">
+            <div class="info-produtos">
+                <img src="img-produtos/adidas_masc_1_trefoil-.png" class="img-produto" alt="Camiseta Adidas Feminina">
+                <label class="lbl-produto">Camiseta Adidas Feminina</label>
+                <label class="lbl-valor">R$ 120,90</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/adidas_masc_3_estampada.png" class="img-produto" alt="Camiseta Adidas Masculina">
+                <label class="lbl-produto">Camiseta Adidas Masculina</label>
+                <label class="lbl-valor">R$ 130,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/lacoste_male_1-polo.png" class="img-produto" alt="Polo Lacoste Masculina">
+                <label class="lbl-produto">Polo Lacoste Masculina</label>
+                <label class="lbl-valor">R$ 150,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/Nikedryfit.png" class="img-produto" alt="Camiseta Nike Dryfit">
+                <label class="lbl-produto">Camiseta Nike Dryfit</label>
+                <label class="lbl-valor">R$ 140,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/adidas-fem-larga.png" class="img-produto" alt="Camiseta Adidas Oversized">
+                <label class="lbl-produto">Camiseta Adidas Oversized</label>
+                <label class="lbl-valor">R$ 135,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/adidas_fem_3_floral.png" class="img-produto"
+                    alt="Camiseta Floral Adidas Feminina">
+                <label class="lbl-produto">Camiseta Floral Adidas Feminina</label>
+                <label class="lbl-valor">R$ 125,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/lacoste_female_3-polo.png" class="img-produto" alt="Polo Lacoste Feminina">
+                <label class="lbl-produto">Polo Lacoste Feminina</label>
+                <label class="lbl-valor">R$ 155,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+
+            <div class="info-produtos">
+                <img src="img-produtos/lacoste_male_3.png" class="img-produto" alt="Camiseta Lacoste Masculina">
+                <label class="lbl-produto">Camiseta Lacoste Masculina</label>
+                <label class="lbl-valor">R$ 145,00</label>
+                <button class="btn-confirmar">Adicionar</button>
+            </div>
+        </div>
+
+        <!--Container do tenis-->
+        <div class="container-tenis">
+            <h1 class="titulo-secao">Tênis</h1>
+            <div class="tenis-cards">
+                <div class="produto-card">
+                    <img src="img-produtos/adidas_masc_1_trefoil-.png" class="produto-img" alt="Tênis Adidas Feminino">
+                    <label class="produto-nome">Tênis Adidas Feminino</label>
+                    <label class="produto-valor">R$ 220,00</label>
+                    <button class="produto-btn">Adicionar</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="img-produtos/adidas_masc_3_estampada.png" class="produto-img"
+                        alt="Tênis Adidas Masculino">
+                    <label class="produto-nome">Tênis Adidas Masculino</label>
+                    <label class="produto-valor">R$ 230,00</label>
+                    <button class="produto-btn">Adicionar</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="img-produtos/Nikedryfit.png" class="produto-img" alt="Tênis Nike Dryfit">
+                    <label class="produto-nome">Tênis Nike Dryfit</label>
+                    <label class="produto-valor">R$ 240,00</label>
+                    <button class="produto-btn">Adicionar</button>
+                </div>
+
+                <div class="produto-card">
+                    <img src="img-produtos/lacoste_male_3.png" class="produto-img" alt="Tênis Lacoste Masculino">
+                    <label class="produto-nome">Tênis Lacoste Masculino</label>
+                    <label class="produto-valor">R$ 250,00</label>
+                    <button class="produto-btn">Adicionar</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
 
     <footer>
         <div class="div-footer-produtos">
@@ -43,7 +148,7 @@
             <h2>Sobre</h2>
             <a href="sobre/sobre.html">Quem Somos</a>
             <a href="#">Política de Privacidade</a>
-            <a href="#">Termos de Serviço</a>   
+            <a href="#">Termos de Serviço</a>
         </div>
 
         <div class="div-footer-produtos">
