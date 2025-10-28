@@ -5,13 +5,11 @@ Este projeto é um **site de uma loja de roupas**, desenvolvido com **HTML, CSS,
 O objetivo é criar uma experiência de compra simples, moderna e responsiva, permitindo que os usuários naveguem pelos produtos, adicionem itens ao carrinho e finalizem suas compras.
 
 ---
-<img align="center" alt="HTML" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> HTML – Estrutura do site
-
-<img align="center" alt="CSS" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> CSS – Estilização básica
-
-<img align="center" alt="TailwindCSS" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"> Tailwind CSS – Estilização utilitária e responsividade
-
-<img align="center" alt="JavaScript" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> JavaScript – Funcionalidades dinâmicas (carrinho de compras, interações) 
+- <img align="center" alt="HTML" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> **HTML** – Estrutura do site  
+- <img align="center" alt="CSS" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> **CSS** – Estilização básica  
+- <img align="center" alt="TailwindCSS" height="25" width="35" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg"> **Tailwind CSS** – Estilização utilitária e responsividade  
+- <img align="center" alt="JavaScript" height="25" width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"> **JavaScript** – Funcionalidades dinâmicas (carrinho de compras, interações)  
+ 
 
 ---
 
