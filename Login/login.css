@@ -17,7 +17,7 @@ header {
     align-items: center;
     background-color: #0045a7;
     width: 100vw;
-    height: 5vh;
+    height: 15vh;
     position: absolute;
     z-index: 1000;
 }
@@ -73,7 +73,7 @@ header nav a:hover {
     position: absolute;
     height: 10vh;
     width: 9vw;
-    top: 7%;
+    margin-bottom: 32%;
     left: 17%;
 }
 

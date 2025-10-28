@@ -97,11 +97,19 @@ header #div-icons-header a img:hover {
 /* ========================
    CONTAINER DE PRODUTOS
    ======================== */
-/* ========================
-   CONTAINER DE PRODUTOS
-   ======================== */
+
 .container-produtos,
-.tenis-cards {
+.tenis-cards,.container-feminino {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.femininoCards, .masculinocard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -132,7 +140,7 @@ header #div-icons-header a img:hover {
 }
 
 /* ========================
-   CARD DE PRODUTO (ROPA E TÊNIS)
+   CARD DE PRODUTO (ROUPA E TÊNIS)
    ======================== */
 .produto-card,
 .info-produtos {
@@ -159,17 +167,6 @@ header #div-icons-header a img:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* ========================
-   CONTEÚDO INTERNO DO CARD
-   ======================== */
-.card-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;           /* ocupa o espaço disponível */
-    justify-content: flex-start;
-    width: 100%;
-}
 
 /* ========================
    IMAGENS
