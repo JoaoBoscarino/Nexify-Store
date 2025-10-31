@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -23,8 +23,10 @@
         <input type="text" id="input-pesquisa" placeholder="o que você procura?">
 
         <div id="div-icons-header">
-            <a href="Login/login.html"><img src="img-icon/perfil-icon.png" alt="icon-perfil"></a>
-            <a href="carrinho/carrinho.html"><img src="img-icon/carrinho-icon.png" alt="icon-carrinho"></a>
+            <a href="cadastrar/cadastrar.html" id="link-perfil"><img src="img-icon/perfil-icon.png" alt="icon-perfil"
+                    id="img-perfil"></a>
+            <a href="carrinho/carrinho.html" id="link-carrinho"><img src="img-icon/carrinho-icon.png" alt="icon-carrinho"></a>
+            <span id="quantidadeItemCarrinho">0</span>
             <a href="https://wa.me/5521972903161?text=Ol%C3%A1%2C%20estou%20com%20uma%20d%C3%BAvida"""><img
                     src="img-icon/mensagem-icon.png" alt="icon-mensagem"></a>
         </div>
@@ -125,44 +127,48 @@
         </div>
 
         <!--Container do tenis-->
+        <!--Container do tenis-->
         <div class="container-tenis">
 
             <h1 class="titulo-secao" id="secaoTenis">Tênis</h1>
 
             <div class="tenis-cards">
-                <div class="produto-card">
-                    <img src="img-tenis/tenis_adidas_1_ultraboost-removebg-preview.png" class="produto-img"
+
+                <div class="info-produtos">
+                    <img src="img-tenis/tenis_adidas_1_ultraboost-removebg-preview.png" class="img-produto"
                         alt="Tênis Adidas Feminino">
-                    <label class="produto-nome">Adidas Ultraboost</label>
-                    <label class="produto-valor">R$ 220,00</label>
-                    <button class="produto-btn">Adicionar</button>
+                    <label class="lbl-produto">Adidas Ultraboost</label>
+                    <label class="lbl-valor">R$ 220,00</label>
+                    <button class="btn-confirmar">Adicionar</button>
                 </div>
 
-                <div class="produto-card">
-                    <img src="img-tenis/tenis_adidas_2_forum-removebg-preview.png" class="produto-img"
+                <div class="info-produtos">
+                    <img src="img-tenis/tenis_adidas_2_forum-removebg-preview.png" class="img-produto"
                         alt="Tênis Adidas Masculino">
-                    <label class="produto-nome">Adidas Dunk</label>
-                    <label class="produto-valor">R$ 230,00</label>
-                    <button class="produto-btn">Adicionar</button>
+                    <label class="lbl-produto">Adidas Dunk</label>
+                    <label class="lbl-valor">R$ 230,00</label>
+                    <button class="btn-confirmar">Adicionar</button>
                 </div>
 
-                <div class="produto-card">
-                    <img src="img-tenis/tenis_adidas_3_yeezy-removebg-preview.png" class="produto-img"
-                        alt="Tênis Nike Dryfit">
-                    <label class="produto-nome">Adidas Yeezy</label>
-                    <label class="produto-valor">R$ 240,00</label>
-                    <button class="produto-btn">Adicionar</button>
+                <div class="info-produtos">
+                    <img src="img-tenis/tenis_adidas_3_yeezy-removebg-preview.png" class="img-produto"
+                        alt="Tênis Adidas Yeezy">
+                    <label class="lbl-produto">Adidas Yeezy</label>
+                    <label class="lbl-valor">R$ 240,00</label>
+                    <button class="btn-confirmar">Adicionar</button>
                 </div>
 
-                <div class="produto-card">
-                    <img src="img-tenis/tenis_nike_2_dunk-removebg-preview.png" class="produto-img"
-                        alt="Tênis Lacoste Masculino">
-                    <label class="produto-nome">Nike Dunk</label>
-                    <label class="produto-valor">R$ 250,00</label>
-                    <button class="produto-btn">Adicionar</button>
+                <div class="info-produtos">
+                    <img src="img-tenis/tenis_nike_2_dunk-removebg-preview.png" class="img-produto"
+                        alt="Tênis Nike Dunk">
+                    <label class="lbl-produto">Nike Dunk</label>
+                    <label class="lbl-valor">R$ 250,00</label>
+                    <button class="btn-confirmar">Adicionar</button>
                 </div>
+
             </div>
         </div>
+
 
     </main>
 

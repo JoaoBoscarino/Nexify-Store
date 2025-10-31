@@ -15,6 +15,9 @@ body {
     background-color: rgb(238, 243, 247);
 }
 
+/* ========================
+   HEADER
+   ======================== */
 header {
     background-color: var(--azulCobalto--);
     height: 15vh;
@@ -27,9 +30,8 @@ header {
 
 header #div-logo-loja {
     position: absolute;
-    height: auto;
-    margin-right: 85%;
     height: 10vh;
+    margin-right: 85%;
 }
 
 header #div-logo-loja img {
@@ -53,22 +55,22 @@ header #input-pesquisa {
 header #div-icons-header {
     position: absolute;
     display: flex;
-    height: auto;
-    width: auto;
-    margin-left: 80%;
     gap: 30px;
+    margin-left: 80%;
 }
 
 header #div-icons-header a img {
     filter: brightness(0) invert(1);
-    transition: ease-in-out 0.1s;
+    transition: 0.1s ease-in-out;
 }
 
 header #div-icons-header a img:hover {
     transform: scale(1.1);
 }
 
-
+/* ========================
+   MENU DE NAVEGAÇÃO
+   ======================== */
 #menu-opcoes {
     border-bottom: 1px solid rgb(0, 0, 0);
     height: 5vh;
@@ -77,39 +79,31 @@ header #div-icons-header a img:hover {
     align-items: center;
 }
 
-#menu-opcoes nav{
+#menu-opcoes nav {
     display: flex;
     gap: 60px;
 }
 
-#menu-opcoes nav a{
+#menu-opcoes nav a {
     text-decoration: none;
     color: black;
     font-size: 1.1em;
-    transition: ease-in-out 0.1s;
+    transition: 0.1s ease-in-out;
 }
 
-#menu-opcoes nav a:hover{
+#menu-opcoes nav a:hover {
     color: rgb(0, 81, 255);
     transform: scale(1.1);
 }
 
 /* ========================
-   CONTAINER DE PRODUTOS
+   CONTAINER DE PRODUTOS (TODAS AS SEÇÕES)
    ======================== */
-
 .container-produtos,
-.tenis-cards,.container-feminino {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-.femininoCards, .masculinocard {
+.femininoCards,
+.masculinocard,
+.tenis-cards,
+.container-feminino {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -120,16 +114,8 @@ header #div-icons-header a img:hover {
 }
 
 /* ========================
-   SEÇÃO TÊNIS
+   SEÇÃO TÍTULOS
    ======================== */
-.container-tenis {
-    width: 100%;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .titulo-secao {
     font-size: 2rem;
     color: #222;
@@ -140,38 +126,31 @@ header #div-icons-header a img:hover {
 }
 
 /* ========================
-   CARD DE PRODUTO (ROUPA E TÊNIS)
+   CARD DE PRODUTO
    ======================== */
-.produto-card,
 .info-produtos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid #ddd;
     border-radius: 12px;
     width: 23%;
     max-width: 270px;
     min-width: 220px;
-    height: 420px; /* altura fixa para uniformidade */
+    height: 420px; /* altura fixa */
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     background-color: #fff;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }   
 
-/* efeito hover */
-.produto-card:hover,
 .info-produtos:hover {
-    transform: scale(1.03);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
-
 
 /* ========================
    IMAGENS
    ======================== */
-.produto-img,
 .img-produto {
     width: auto;
     height: 220px;
@@ -182,7 +161,6 @@ header #div-icons-header a img:hover {
 /* ========================
    NOME DO PRODUTO
    ======================== */
-.produto-nome,
 .lbl-produto {
     font-size: 1.3rem;
     font-weight: 600;
@@ -198,7 +176,6 @@ header #div-icons-header a img:hover {
 /* ========================
    VALOR DO PRODUTO
    ======================== */
-.produto-valor,
 .lbl-valor {
     font-size: 1.1rem;
     font-weight: 500;
@@ -208,13 +185,12 @@ header #div-icons-header a img:hover {
 }
 
 /* ========================
-   BOTÕES
+   BOTÕES DE ADICIONAR
    ======================== */
-.produto-btn,
 .btn-confirmar {
     width: 90%;
     height: 50px;
-    margin-top: auto;       /* força o botão para o final do card */
+    margin-top: auto; /* empurra o botão pro final do card */
     border: none;
     border-radius: 8px;
     background-color: #007bff;
@@ -226,16 +202,13 @@ header #div-icons-header a img:hover {
     display: block;
 }
 
-.produto-btn:hover,
 .btn-confirmar:hover {
     background-color: #005fcc;
-    transform: scale(1.03);
 }
 
-
-
-/*Parte do footer*/
-
+/* ========================
+   FOOTER
+   ======================== */
 footer {
     height: 30vh;
     background-color: rgb(44, 44, 44);
@@ -244,14 +217,12 @@ footer {
     align-items: center;
     justify-content: space-around;
     color: white;
-
 }
 
 footer div {
-    margin-top: -5%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 10px;
 }
@@ -277,3 +248,40 @@ footer p {
     margin-top: 12%;
     font-size: 12pt;
 }
+
+
+#link-carrinho {
+    position: relative;
+    display: inline-block;
+}
+
+#quantidadeItemCarrinho {
+    position: absolute;
+    top: -55%;
+    left: 52%;
+    background-color: #ff3b3b; /* vermelho gamer */
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+#btn-sair {
+    background-color: #ff4d4d; /* vermelho chamativo */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-sair:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+

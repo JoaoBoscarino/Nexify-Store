@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="cadastrar.css">
     <title>Nexify Store</title>
 </head>
+
 <body>
 
     <header>
@@ -21,7 +23,7 @@
             </nav>
         </div>
     </header>
-    
+
     <div id="container">
         <div id="div-esquerda">
             <div id="div-logo"><img src="../img-icon/logo-icon-transparent.png" alt="Nexify Store"></div>
@@ -31,33 +33,41 @@
 
         <div id="div-direita">
             <div id="campo-login">
-            <div id="lbl-login">Cadastro</div>
+                <div id="lbl-login">Cadastro</div>
 
-            <form action="">
+                <form id="form-cadastro">
 
-                <div class="div-inputs">
-                    <input type="text" id="input-usuario" name="username" required>
-                    <label for="username" class="lbl-input" id="lbl-Nome">Nome:</label>
-                </div>
+                    <!-- Modal de sucesso -->
+                    <div id="modal-sucesso" class="modal">
+                        <div class="modal-content">
+                            <h2>Cadastro realizado com sucesso!</h2>
+                            <button id="btn-fechar-modal">Fechar</button>
+                        </div>
+                    </div>
 
-                <div class="div-inputs">
-                    <input type="password" id="input-senha" name="password" required>
-                    <label for="password" class="lbl-input" id="lbl-senha">Senha:</label>
-                </div>
+                    
+                    <div class="div-inputs">
+                        <input type="text" id="input-usuario" name="username" required>
+                        <label for="username" class="lbl-input" id="lbl-Nome">Nome:</label>
+                    </div>
 
-                <div class="div-inputs">
-                    <input type="password" id="input-senha-novamente" name="password" required>
-                    <label for="password" class="lbl-input" id="lblConfirmarSenha">Confirmar Senha:</label>
-                </div>
+                    <div class="div-inputs">
+                        <input type="password" id="input-senha" name="password" required>
+                        <label for="password" class="lbl-input" id="lbl-senha">Senha:</label>
+                    </div>
 
-                <div id="div-btnConfirmar">
-                    <button id="btn-confirmar" type="submit">Cadastrar</button>
-                </div>
+                    <div class="div-inputs">
+                        <input type="password" id="input-confirmarSenha" name="password" required>
+                        <label for="password" class="lbl-input" id="lblConfirmarSenha">Confirmar Senha:</label>
+                    </div>
 
-                <label id="lblEntrarConta">Já tem uma conta? Faça o <a href="../Login/login.html">login</a></label>    
-                
+                    <div id="div-btnConfirmar">
+                        <button id="btn-confirmar" type="submit">Cadastrar</button>
+                    </div>
 
-            </form>
+
+
+                </form>
 
 
             </div>
@@ -65,6 +75,7 @@
 
 
     </div>
-    
+    <script src="cadastrar.js"></script>
 </body>
+
 </html>
