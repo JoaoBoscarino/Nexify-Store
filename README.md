@@ -9,7 +9,6 @@ O objetivo é criar uma experiência de compra simples, moderna e responsiva, pe
 
 - <img align="center" alt="HTML" height="25" width="35" src="https://cdn.cdnlogo.com/logos/h/84/html.svg"> **HTML** 
 - <img align="center" alt="CSS" height="25" width="35" src="https://cdn.cdnlogo.com/logos/c/18/css.svg"> **CSS**
-- <img align="center" alt="TailwindCSS" height="25" width="35" src="https://static.cdnlogo.com/logos/t/34/tailwind-css.svg"> **Tailwind CSS** 
 - <img align="center" alt="JavaScript" height="25" width="35" src="https://cdn.cdnlogo.com/logos/j/44/javascript.svg"> **JavaScript**  
 
  
