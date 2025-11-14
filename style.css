@@ -285,3 +285,124 @@ footer p {
     transform: scale(1.05);
 }
 
+
+
+
+
+
+/* ==========================================
+   RESPONSIVIDADE PARA TELAS ATÉ 768px
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+    header {
+        padding: 10px;
+        gap: 10px;
+        flex-wrap: wrap; /* Permite quebrar linha sem usar column */
+        justify-content: center;
+    }
+
+    #div-logo-loja img {
+        width: 120px;
+    }
+
+    #input-pesquisa {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    #div-icons-header {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #div-icons-header img {
+        width: 28px;
+    }
+
+    #quantidadeItemCarrinho {
+        font-size: 13px;
+        padding: 2px 5px;
+        top: -5px;
+        right: -8px !important;
+    }
+
+    /* ===== MENU SUPERIOR ===== */
+    #menu-opcoes nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    #menu-opcoes nav a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    /* ===== TÍTULOS DAS SEÇÕES ===== */
+    .titulo-secao {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    /* ===== CARDS DE PRODUTOS ===== */
+    .masculinocard,
+    .femininoCards,
+    .tenis-cards {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .info-produtos {
+        width: 45%;
+        min-width: 150px;
+        text-align: center;
+    }
+
+    .img-produto {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .lbl-produto,
+    .lbl-valor {
+        font-size: 14px;
+    }
+
+    .btn-confirmar {
+        width: 90%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer .div-footer-produtos {
+        margin-bottom: 20px;
+    }
+
+    footer img {
+        width: 45px;
+    }
+
+    footer hr {
+        width: 80%;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+}

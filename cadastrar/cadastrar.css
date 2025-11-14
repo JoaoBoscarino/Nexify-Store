@@ -250,3 +250,39 @@ header nav a:hover {
 #btn-fechar-modal:hover {
     background-color: #009acd;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    header nav ul {
+        gap: 10px;
+        text-align: center;
+        padding: 0;
+    }
+
+    #div-logo img {
+        width: 150px;
+    }
+
+    #campo-login {
+        width: 90%;
+    }
+
+    #div-esquerda h2 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
