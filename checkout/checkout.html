@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <header>
+        <div id="div-logo-loja">
+            <a href="../index.html">
+                <img src="../img-icon/logo-icon-transparent.png" alt="logo-loja">
+            </a>
+        </div>
+        <div id="div-titulo-loja">
+            <h1>Checkout</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Checkout</h2>
+
+        <div class="section">
+            <h3>Endereço de Entrega</h3>
+            <div class="row">
+                <div><input type="text" placeholder="Bairro" required></div>
+                <div><input type="text" placeholder="Cidade" required></div>
+            </div>
+            <input type="text" placeholder="CEP" required>
+        </div>
+
+        <div class="section">
+            <h3>Forma de Pagamento</h3>
+            <div class="pagamentos">
+                <label class="card-pagamento">
+                    <input type="radio" name="pagamento" value="pix" checked>
+                    <span>Pix</span>
+                </label>
+                <label class="card-pagamento">
+                    <input type="radio" name="pagamento" value="boleto">
+                    <span>Boleto</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Resumo do Pedido</h3>
+            <div class="resumo"></div>
+        </div>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="footer-checkout">
+        <p><strong>Total:</strong></p>
+        <button id="btn-finalizar">Confirmar Compra</button>
+    </div>
+
+    <!-- OVERLAY DA ANIMAÇÃO -->
+    <div id="animacao-pedido">
+        <div class="caminhao-wrapper">
+            <img src="../img-icon/caminhao.png" alt="Caminhão" class="caminhao">
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
