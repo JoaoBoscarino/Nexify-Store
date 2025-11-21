@@ -342,10 +342,17 @@ header #div-titulo-loja {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181
 @media (max-width: 768px) {
 
     /* HEADER */
     header {
+<<<<<<< HEAD
         height: auto;
         padding: 15px 0;
         flex-direction: column;
@@ -455,3 +462,66 @@ header #div-titulo-loja {
     }
 }
 
+=======
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #div-logo-loja img {
+        width: 150px;
+    }
+
+    #div-titulo-loja h1 {
+        font-size: 22px;
+    }
+
+    /* CONTAINER PRINCIPAL */
+    #container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* PRODUTOS */
+    #info-produto {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* MENU FIXO EMBAIXO */
+    #menu-embaixo {
+       
+        gap: 10px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .div-qtdItens,
+    .div-lblTotal,
+    .div-btnConfirmar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btnConfirmar {
+        width: 90%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* MODAIS */
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+>>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181

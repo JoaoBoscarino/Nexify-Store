@@ -238,6 +238,7 @@ header nav a:hover {
 
 
 
+<<<<<<< HEAD
 /* ===========================
     RESPONSIVIDADE
 =========================== */
@@ -371,3 +372,36 @@ header nav a:hover {
 }
 
 }
+=======
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    header nav ul {
+        gap: 10px;
+        text-align: center;
+        padding: 0;
+    }
+
+    #div-logo img {
+        width: 150px;
+    }
+
+    #campo-login {
+        width: 90%;
+    }
+
+    #div-esquerda h2 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+>>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181
