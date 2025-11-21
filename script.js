@@ -1,7 +1,7 @@
 const usuario = localStorage.getItem("usuario");
 const linkPerfil = document.getElementById("link-perfil");
 
-// Verifica se o usuário está logado
+
 if (usuario) {
     linkPerfil.outerHTML = `<span id="user-container">${usuario} <button id="btn-sair">Sair</button></span>`;
 
@@ -12,7 +12,7 @@ if (usuario) {
     });
 }
 
-// Função para atualizar a badge do carrinho
+
 function atualizarBadge() {
     const badge = document.getElementById("quantidadeItemCarrinho");
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -46,10 +46,33 @@ botaoAdicionar.forEach((botao) => {
 
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-        // Atualiza a badge do carrinho
         atualizarBadge();
     });
 });
 
-// Inicializa a badge ao carregar a página
+
 atualizarBadge();
+
+
+
+
+const inputPesquisa = document.getElementById("input-pesquisa");
+
+inputPesquisa.addEventListener("keyup", () =>{
+
+    const filtro = inputPesquisa.value.toLowerCase();
+    const produtos = document.querySelectorAll(".card");
+
+    produtos.forEach((produto) => {
+        const nomeProduto = produto.querySelector(".lbl-produto").textContent.toLowerCase();
+
+        if(nomeProduto.includes(filtro)){
+            produto.style.display = "";
+        } else {
+            produto.style.display = "none";
+        }
+    });
+
+
+
+})

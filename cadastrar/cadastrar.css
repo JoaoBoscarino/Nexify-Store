@@ -71,18 +71,15 @@ header nav a:hover {
 
 #div-logo {
     position: absolute;
-    height: 10vh;
-    width: 9vw;
-    top: 7%;
-    left: 17%;
+    top: 20px;
+    left: 20px;
+    width: 10vw;
+}
+#div-logo img {
+    width: 100%;
+    height: auto;
 }
 
-#div-esquerda #div-logo img {
-    display: flex;
-    position: absolute;
-    height: 20vh;
-    margin-top: 48.5%;
-}
 
 #div-esquerda h2 {
     color: var(--branco--);
@@ -140,33 +137,19 @@ header nav a:hover {
     outline: none;
 }
 
-.lbl-input {
-    position: absolute;
-    color: gray;
-    font-size: 1.05em;
-    margin-right: 10%;
-    margin-top: 0.4%;
-    pointer-events: none;
-    transition: 0.2s;
+#input-usuario::placeholder {
+    color: #5b8aff;
+    letter-spacing: 1px;
+}
+#input-senha::placeholder {
+    color: #5b8aff;
+    letter-spacing: 1px;
+}
+#input-confirmarSenha::placeholder {
+    color: #5b8aff;
+    letter-spacing: 1px;
 }
 
-
-#lblConfirmarSenha {
-    margin-right: 6%;
-    pointer-events: none;
-}
-
-#input-usuario:focus+#lbl-Nome {
-    margin-top: -1.25%;
-    font-size: 0.9em;
-    color: blue;
-}
-
-#input-senha:focus+#lbl-senha {
-    margin-top: -1.25%;
-    font-size: 0.9em;
-    color: blue;
-}
 
 #input-confirmarSenha:focus+#lblConfirmarSenha {
     margin-top: -1.25%;
@@ -249,4 +232,142 @@ header nav a:hover {
 }
 #btn-fechar-modal:hover {
     background-color: #009acd;
+}
+
+
+
+
+
+/* ===========================
+    RESPONSIVIDADE
+=========================== */
+
+/* Telas entre 1024px e 900px */
+@media (max-width: 1024px) {
+
+    #campo-login {
+        width: 30vw;
+        height: 50vh;
+    }
+
+    #input-usuario,
+    #input-senha,
+    #input-confirmarSenha {
+        width: 18vw;
+    }
+
+    #btn-confirmar {
+        width: 10vw;
+    }
+
+    #div-logo {
+        left: 10%;
+        width: 12vw;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    header {
+        height: 12vh;
+    }
+
+    header nav a {
+        font-size: 1.1em;
+    }
+
+    #campo-login {
+        width: 35vw;
+        height: 52vh;
+    }
+
+    #input-usuario,
+    #input-senha,
+    #input-confirmarSenha {
+        width: 22vw;
+    }
+
+    #btn-confirmar {
+        width: 12vw;
+    }
+}
+
+/* Telas até 768px – quebra principal */
+/* Telas até 768px – quebra principal */
+@media (max-width: 768px) {
+
+    /* Some apenas a parte azul */
+    #div-esquerda {
+        display: none;
+    }
+
+    #container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 10vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center; /* MENU NO CENTRO */
+        background-color: #0045a7;
+        z-index: 1000;
+    }
+
+    /* LOGO fica fixa no canto esquerdo */
+    #div-logo {
+        position: absolute; 
+        left: 15px; 
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: auto;
+        margin: 0;
+    }
+
+    #div-logo img {
+        height: 45px;
+        width: auto;
+    }
+
+    /* Parte direita */
+    #div-direita {
+        width: 100%;
+        padding-top: 12vh;
+    }
+
+    #campo-login {
+        width: 60vw;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    #input-usuario,
+    #input-senha,
+    #input-confirmarSenha {
+        width: 45vw;
+        height: 5vh;
+    }
+
+    #btn-confirmar {
+        width: 30vw;
+        height: 5vh;
+    }
+
+    #div-direita {
+    width: 100%;
+    padding-top: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
+}
+
 }

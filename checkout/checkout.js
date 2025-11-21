@@ -37,13 +37,7 @@ function carregarCarrinho() {
     totalElement.textContent = `R$ ${total.toFixed(2)}`;
 }
 
-// VALIDAR CAMPOS
-function validarCampos() {
-    for (let input of formInputs) {
-        if (!input.value.trim()) return false;
-    }
-    return true;
-}
+
 
 // MOSTRAR IMAGEM DO QR CODE
 function mostrarQRCode() {
@@ -54,20 +48,22 @@ function mostrarQRCode() {
 
 // FINALIZAR COMPRA (ABRIR MODAL QR)
 function finalizarCompra() {
-    if (!validarCampos()) {
-        alert('Por favor, preencha todos os campos!');
+    const form = document.getElementById('form-checkout');
+
+    // validação nativa
+    if (!form.checkValidity()) {
+        form.reportValidity(); // mostra a mensagem
         return;
     }
 
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     if (carrinho.length === 0) {
-        alert('Carrinho vazio!');
         return;
     }
 
-    // Mostra a imagem do QR
     mostrarQRCode();
 }
+
 
 // EVENTOS
 document.addEventListener('DOMContentLoaded', carregarCarrinho);

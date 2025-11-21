@@ -61,14 +61,7 @@ function salvaritemAdd() {
 
 mostrarCarrinho();
 
-// ======== SELEÇÃO DE MODAIS ========
-const modalConfirm = document.getElementById("modal-confirm");
-const modalSucesso = document.getElementById("modal-sucesso");
-const btnConfirmar = document.querySelector(".btnConfirmar");
-const btnCancelar = document.getElementById("btn-cancelar");
-const btnConfirmarCompra = document.getElementById("btn-confirmar-compra");
-const btnFecharSucesso = document.getElementById("btn-fechar-sucesso");
-
+// ======== MODAIS QUE SERÃO MANTIDOS ========
 const modalLoginAviso = document.getElementById("modal-login-aviso");
 const btnFecharLoginAviso = document.getElementById("btn-fechar-login-aviso");
 const btnLoginDireto = document.getElementById("btn-login-direto");
@@ -76,14 +69,13 @@ const btnLoginDireto = document.getElementById("btn-login-direto");
 const modalCarrinhoVazio = document.getElementById("modal-carrinho-vazio");
 const btnFecharCarrinhoVazio = document.getElementById("btn-fechar-carrinho-vazio");
 
-// ======== EVENTOS ========
+// ======== BOTÃO CONFIRMAR → CHECKOUT ========
+document.querySelector(".btnConfirmar").addEventListener("click", () => {
 
-// Abrir modal de confirmação ao clicar em "Confirmar"
-btnConfirmar.addEventListener("click", () => {
     const usuario = localStorage.getItem("usuario");
 
     if (!usuario) {
-        modalLoginAviso.style.display = "flex"; // usuário não logado
+        modalLoginAviso.style.display = "flex"; // avisar login
         return;
     }
 
@@ -92,39 +84,21 @@ btnConfirmar.addEventListener("click", () => {
         return;
     }
 
-    modalConfirm.style.display = "flex"; // tudo certo, abre modal de confirmação
+    // Tudo ok → vai para checkout
+    window.location.href = "../checkout/checkout.html";
 });
 
-// Cancelar compra
-btnCancelar.addEventListener("click", () => {
-    modalConfirm.style.display = "none";
-});
-
-// Confirmar compra
-btnConfirmarCompra.addEventListener("click", () => {
-    modalConfirm.style.display = "none";
-    modalSucesso.style.display = "flex";
-
-    carrinho = [];
-    salvaritemAdd();
-});
-
-// Fechar modal de sucesso
-btnFecharSucesso.addEventListener("click", () => {
-    modalSucesso.style.display = "none";
-});
-
-// Fechar modal de aviso login
+// Fechar aviso login
 btnFecharLoginAviso.addEventListener("click", () => {
     modalLoginAviso.style.display = "none";
 });
 
-// Redirecionar para login
+// Ir para login
 btnLoginDireto.addEventListener("click", () => {
     window.location.href = "../cadastrar/cadastrar.html";
 });
 
-// Fechar modal de carrinho vazio
+// Fechar aviso carrinho vazio
 btnFecharCarrinhoVazio.addEventListener("click", () => {
     modalCarrinhoVazio.style.display = "none";
 });

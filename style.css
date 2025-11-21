@@ -1,7 +1,7 @@
 :root {
-    --branco--: #ffffff;
-    --preto--: #000000;
-    --azulCobalto--: #0047AB;
+    --branco: #ffffff;
+    --preto: #000000;
+    --azul: #0047AB;
 }
 
 * {
@@ -11,277 +11,312 @@
     font-family: "Poppins", sans-serif;
 }
 
+
+
 body {
     background-color: rgb(238, 243, 247);
+    display: flex;
+    flex-direction: column;
 }
 
-/* ========================
-   HEADER
-   ======================== */
 header {
-    background-color: var(--azulCobalto--);
+    background: var(--azul);
     height: 15vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--branco--);
+    position: relative;
 }
 
-header #div-logo-loja {
+#div-logo-loja {
     position: absolute;
-    height: 10vh;
-    margin-right: 85%;
+    left: 20px;
 }
 
-header #div-logo-loja img {
+#div-logo-loja img {
     height: 9vh;
-    border-radius: 5px;
 }
 
-header #input-pesquisa {
-    position: absolute;
-    height: 6vh;
+#input-pesquisa {
     width: 60vh;
+    padding: 10px;
     border-radius: 15px;
     border: none;
-    padding-left: 10px;
-    background-image: url('img-icon/lupa-icon.png');
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: right 10px center;
-}
-
-header #div-icons-header {
-    position: absolute;
-    display: flex;
-    gap: 30px;
-    margin-left: 80%;
-}
-
-header #div-icons-header a img {
-    filter: brightness(0) invert(1);
-    transition: 0.1s ease-in-out;
-}
-
-header #div-icons-header a img:hover {
-    transform: scale(1.1);
-}
-
-/* ========================
-   MENU DE NAVEGAÇÃO
-   ======================== */
-#menu-opcoes {
-    border-bottom: 1px solid rgb(0, 0, 0);
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu-opcoes nav {
-    display: flex;
-    gap: 60px;
-}
-
-#menu-opcoes nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.1em;
-    transition: 0.1s ease-in-out;
-}
-
-#menu-opcoes nav a:hover {
-    color: rgb(0, 81, 255);
-    transform: scale(1.1);
-}
-
-/* ========================
-   CONTAINER DE PRODUTOS (TODAS AS SEÇÕES)
-   ======================== */
-.container-produtos,
-.femininoCards,
-.masculinocard,
-.tenis-cards,
-.container-feminino {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-/* ========================
-   SEÇÃO TÍTULOS
-   ======================== */
-.titulo-secao {
-    font-size: 2rem;
-    color: #222;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: center;
-}
-
-/* ========================
-   CARD DE PRODUTO
-   ======================== */
-.info-produtos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    border-radius: 12px;
-    width: 23%;
-    max-width: 270px;
-    min-width: 220px;
-    height: 420px; /* altura fixa */
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     background-color: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}   
-
-.info-produtos:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    background-image: url("img-icon/lupa-icon.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
 }
 
-/* ========================
-   IMAGENS
-   ======================== */
-.img-produto {
-    width: auto;
-    height: 220px;
-    object-fit: contain;
-    margin-bottom: 10px;
+#div-icons-header {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 25px;
 }
 
-/* ========================
-   NOME DO PRODUTO
-   ======================== */
-.lbl-produto {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #222;
-    text-align: center;
-    margin: 5px 0;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* ========================
-   VALOR DO PRODUTO
-   ======================== */
-.lbl-valor {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #007bff;
-    margin: 5px 0 10px 0;
-    text-align: center;
-}
-
-/* ========================
-   BOTÕES DE ADICIONAR
-   ======================== */
-.btn-confirmar {
-    width: 90%;
-    height: 50px;
-    margin-top: auto; /* empurra o botão pro final do card */
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
+#div-icons-header img {
+    filter: brightness(0) invert(1);
     cursor: pointer;
-    transition: all 0.2s ease;
-    display: block;
+    transition: 0.2s ease;
 }
 
-.btn-confirmar:hover {
-    background-color: #005fcc;
+#div-icons-header img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
 }
-
-/* ========================
-   FOOTER
-   ======================== */
-footer {
-    height: 30vh;
-    background-color: rgb(44, 44, 44);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-}
-
-footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-footer div a {
-    color: rgb(88, 88, 88);
-    text-decoration: none;
-}
-
-footer div img {
-    height: 5vh;
-    width: auto;
-}
-
-footer hr {
-    position: absolute;
-    margin-top: 5%;
-    width: 80%;
-}
-
-footer p {
-    position: absolute;
-    margin-top: 12%;
-    font-size: 12pt;
-}
-
 
 #link-carrinho {
     position: relative;
-    display: inline-block;
 }
 
 #quantidadeItemCarrinho {
     position: absolute;
-    top: -55%;
-    left: 52%;
-    background-color: #ff3b3b; /* vermelho gamer */
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 1px 6px;
-    border-radius: 100%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: .75rem;
 }
 
+#user-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: #fff;
+}
 
 #btn-sair {
-    background-color: #ff4d4d; /* vermelho chamativo */
+    background: #d32f2f;
     color: #fff;
+    padding: 6px 14px;
     border: none;
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-weight: bold;
+    border-radius: 8px;
+    font-size: .9rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .2s ease;
 }
 
 #btn-sair:hover {
-    background-color: #ff1a1a;
+    background: #b71c1c;
     transform: scale(1.05);
 }
 
+#menu-opcoes {
+    height: 5vh;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#menu-opcoes a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+#menu-opcoes a:hover {
+    color: var(--azul);
+    transform: scale(1.1);
+}
+
+.titulo-secao {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1200px;
+    flex: 1;
+}
+
+.card {
+    background: #fff;
+    width: 23%;
+    min-width: 220px;
+    max-width: 260px;
+    height: 420px;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.img-produto {
+    height: 220px;
+    object-fit: contain;
+}
+
+.lbl-produto {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.lbl-valor {
+    color: #0066ff;
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.btn-confirmar {
+    margin-top: auto;
+    padding: 12px;
+    width: 90%;
+    border: none;
+    background: #0066ff;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover {
+    background: #0052cc;
+}
+
+footer {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 50px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-top: auto;
+}
+
+footer .footer-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+footer .footer-conteudo>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+footer img {
+    height: 55px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    /* Some o input de pesquisa */
+    #input-pesquisa {
+        display: none;
+    }
+
+    /* HEADER */
+    header {
+        height: auto;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #div-logo-loja {
+        position: static;
+    }
+
+    #div-icons-header {
+        position: static;
+        gap: 15px;
+    }
+
+    /* MENU */
+    #menu-opcoes {
+        gap: 20px;
+        font-size: .9rem;
+        height: auto;
+        padding: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    /* CARDS */
+    .cards-container {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 45%;
+        max-width: none;
+        height: auto;
+    }
+
+    .img-produto {
+        height: 160px;
+    }
+
+    /* FOOTER */
+    footer .footer-conteudo {
+        flex-direction: column;
+        gap: 25px;
+
+        /* Isso aqui centraliza TUDO no mobile */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-conteudo > div {
+        align-items: center;
+    }
+}

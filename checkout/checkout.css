@@ -2,27 +2,26 @@
     --branco--: #ffffff;
     --preto--: #000000;
     --azulCobalto--: #0047AB;
-
     --cinzaSuave--: #f5f7fa;
     --cinzaTexto--: #444;
     --bordaLeve--: rgba(0, 0, 0, 0.1);
 }
 
-/* RESET GERAL */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body, html {
+body,
+html {
     font-family: Arial, sans-serif;
     background: var(--cinzaSuave--);
     color: var(--preto--);
     overflow-x: hidden;
 }
 
-/* ---------------- HEADER ---------------- */
+/* HEADER */
 header {
     background: var(--azulCobalto--);
     padding: 20px 40px;
@@ -31,7 +30,7 @@ header {
     justify-content: center;
     position: relative;
     color: var(--branco--);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     height: 15vh;
     min-height: 90px;
 }
@@ -52,31 +51,32 @@ header {
 #div-titulo-loja h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ---------------- CONTAINER ---------------- */
+/* CONTAINER */
 .container {
     max-width: 900px;
-    margin: 20px auto 140px auto; /* espaço para footer */
+    margin: 20px auto 140px auto;
     background: var(--branco--);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--bordaLeve--);
 }
 
-h2, h3 {
+h2,
+h3 {
     color: var(--azulCobalto--);
     margin-bottom: 15px;
 }
 
-/* SEÇÕES */
 .section {
     margin-bottom: 30px;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
@@ -88,13 +88,14 @@ input, select {
     transition: 0.2s ease;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     border-color: var(--preto--);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     outline: none;
 }
 
-/* LINHAS (ROW) */
+/* LINHAS */
 .row {
     display: flex;
     gap: 15px;
@@ -142,13 +143,12 @@ input:focus, select:focus {
     padding: 18px;
     border-radius: 10px;
     border: 1px solid var(--azulCobalto--);
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     max-height: 200px;
     overflow-y: auto;
 }
 
-/* BOTÕES GERAIS */
 button {
     background: var(--azulCobalto--);
     color: var(--branco--);
@@ -165,7 +165,7 @@ button:hover {
     transform: scale(1.02);
 }
 
-/* ---------------- FOOTER FIXO ---------------- */
+/* FOOTER */
 .footer-checkout {
     position: fixed;
     bottom: 10px;
@@ -177,7 +177,7 @@ button:hover {
     background: var(--branco--);
     border-radius: 12px;
     border: 1px solid var(--bordaLeve--);
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -195,62 +195,76 @@ button:hover {
     font-weight: 700;
 }
 
-/* ---------------- MODAL QR CODE ---------------- */
+/* MODAL QR CODE */
 #qr-modal {
-    display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
     align-items: center;
-    z-index: 2000;
+    justify-content: center;
+    z-index: 9999;
 }
 
-#qr-modal .qr-box {
-    background: var(--branco--);
-    padding: 30px 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    width: 90%;
+.qr-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
     max-width: 320px;
-    animation: modalFade 0.3s ease;
+    width: 90%;
+    text-align: center;
 }
 
-#qr-modal .qr-buttons {
-    margin-top: 20px;
+#qr-code {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 6px;
+}
+
+.qr-buttons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-#qr-modal .qr-buttons button {
+.qr-buttons button {
     flex: 1;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px;
+    background: #0047AB;
     border: none;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    background-color: var(--azulCobalto--);
-    color: var(--branco--);
+    font-size: 16px;
 }
 
-#qr-modal .qr-buttons button:hover {
-    background-color: #003a8d;
+.qr-buttons button:hover {
+    opacity: .9;
 }
 
 @keyframes modalFade {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-/* ---------------- ANIMAÇÃO CAMINHÃO ---------------- */
+/* ANIMAÇÃO CAMINHÃO */
 #animacao-pedido {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -266,11 +280,11 @@ button:hover {
 
 .caminhao-wrapper {
     position: absolute;
-    left: -100px; /* começa fora da tela */
+    left: -100px;
 }
 
 .caminhao {
-    width: 100px; /* tamanho do caminhão */
+    width: 100px;
     height: auto;
 }
 
@@ -280,33 +294,55 @@ button:hover {
 
 @keyframes moverCaminhao {
     0% {
-        transform: translateX(0); /* começando fora da tela */
+        transform: translateX(0);
     }
     40% {
-        transform: translateX(calc(54vw)); /* centralizado (50% da tela - metade da largura) */
+        transform: translateX(calc(54vw));
     }
     100% {
-        transform: translateX(120vw); /* sai totalmente à direita */
+        transform: translateX(120vw);
     }
 }
 
-
-/* ---------------- RESPONSIVO ---------------- */
+/* RESPONSIVO */
 @media (max-width: 768px) {
+
+    #div-titulo-loja h1 {
+        display: none;
+    }
+
     header {
         padding: 15px;
         flex-direction: column;
         gap: 10px;
         min-height: auto;
+        justify-content: center;
+        align-items: center;
     }
+
     #div-logo-loja {
-        position: relative;
-        left: 0;
+        position: static;
+        left: auto;
         transform: none;
     }
-    #div-logo-loja img { width: 70px; height: 70px; }
-    #div-titulo-loja h1 { font-size: 26px; }
-    .footer-checkout { flex-direction: column; text-align: center; gap: 10px; }
-    .footer-checkout button { width: 100%; }
-    .row { flex-direction: column; }
+
+    #div-logo-loja img {
+        width: 120px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .footer-checkout {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-checkout button {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
 }
