@@ -1,7 +1,0 @@
-Tela principal (fazer o php para adicionar os itens)
-
-Carrinho (Fazer o php para receber os produtos)
-
-tela login (fazer o js para se cadastrar/logar)
-
-fazer a parte do administrador (adicionar, remover, editar e excluir produtos e clientes)

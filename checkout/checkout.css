@@ -21,7 +21,6 @@ html {
     overflow-x: hidden;
 }
 
-/* HEADER */
 header {
     background: var(--azulCobalto--);
     padding: 20px 40px;
@@ -54,7 +53,6 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* CONTAINER */
 .container {
     max-width: 900px;
     margin: 20px auto 140px auto;
@@ -95,13 +93,11 @@ select:focus {
     outline: none;
 }
 
-/* LINHAS */
 .row {
     display: flex;
     gap: 15px;
 }
 
-/* PAGAMENTO */
 .pagamentos {
     display: flex;
     gap: 20px;
@@ -137,7 +133,6 @@ select:focus {
     color: var(--cinzaTexto--);
 }
 
-/* RESUMO */
 .resumo {
     background: var(--cinzaSuave--);
     padding: 18px;
@@ -165,7 +160,6 @@ button:hover {
     transform: scale(1.02);
 }
 
-/* FOOTER */
 .footer-checkout {
     position: fixed;
     bottom: 10px;
@@ -195,7 +189,6 @@ button:hover {
     font-weight: 700;
 }
 
-/* MODAL QR CODE */
 #qr-modal {
     position: fixed;
     top: 0;
@@ -257,7 +250,6 @@ button:hover {
     }
 }
 
-/* ANIMAÇÃO CAMINHÃO */
 #animacao-pedido {
     position: fixed;
     top: 0;
@@ -304,7 +296,6 @@ button:hover {
     }
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
 
     #div-titulo-loja h1 {

@@ -1,7 +1,6 @@
 const lista = document.getElementById("info-produto");
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-// ======== FUNÇÕES DO CARRINHO ========
 function mostrarCarrinho() {
     lista.innerHTML = "";
 
@@ -61,7 +60,6 @@ function salvaritemAdd() {
 
 mostrarCarrinho();
 
-// ======== MODAIS QUE SERÃO MANTIDOS ========
 const modalLoginAviso = document.getElementById("modal-login-aviso");
 const btnFecharLoginAviso = document.getElementById("btn-fechar-login-aviso");
 const btnLoginDireto = document.getElementById("btn-login-direto");
@@ -69,36 +67,31 @@ const btnLoginDireto = document.getElementById("btn-login-direto");
 const modalCarrinhoVazio = document.getElementById("modal-carrinho-vazio");
 const btnFecharCarrinhoVazio = document.getElementById("btn-fechar-carrinho-vazio");
 
-// ======== BOTÃO CONFIRMAR → CHECKOUT ========
 document.querySelector(".btnConfirmar").addEventListener("click", () => {
 
     const usuario = localStorage.getItem("usuario");
 
     if (!usuario) {
-        modalLoginAviso.style.display = "flex"; // avisar login
+        modalLoginAviso.style.display = "flex";
         return;
     }
 
     if (carrinho.length === 0) {
-        modalCarrinhoVazio.style.display = "flex"; // carrinho vazio
+        modalCarrinhoVazio.style.display = "flex";
         return;
     }
 
-    // Tudo ok → vai para checkout
     window.location.href = "../checkout/checkout.html";
 });
 
-// Fechar aviso login
 btnFecharLoginAviso.addEventListener("click", () => {
     modalLoginAviso.style.display = "none";
 });
 
-// Ir para login
 btnLoginDireto.addEventListener("click", () => {
     window.location.href = "../cadastrar/cadastrar.html";
 });
 
-// Fechar aviso carrinho vazio
 btnFecharCarrinhoVazio.addEventListener("click", () => {
     modalCarrinhoVazio.style.display = "none";
 });

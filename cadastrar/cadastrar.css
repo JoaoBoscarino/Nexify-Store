@@ -10,7 +10,6 @@
     box-sizing: border-box;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: center;
@@ -88,8 +87,6 @@ header nav a:hover {
     text-align-last: center;
 }
 
-/*Parte direita*/
-
 #div-direita {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -116,7 +113,7 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 1.5rem;
 }
 
 
@@ -179,20 +176,47 @@ header nav a:hover {
 }
 
 
+#link-login {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+#link-login a {
+    color: var(--azulCobalto--);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+#link-login a:hover {
+    color: rgb(0, 106, 255);
+}
 
 
 
+#aviso-erro {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    font-size: 0.9em;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.3);
+    margin-top: 10px;
+    animation: aparecerErro 0.4s ease-out;
+}
 
+@keyframes aparecerErro {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 
-
-
-
-
-
-
-/* Modal escondido por padrão */
 .modal {
-    display: none; /* fica escondido */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -204,23 +228,20 @@ header nav a:hover {
     align-items: center;
 }
 
-/* Conteúdo do modal */
 .modal-content {
     background-color: #fff;
     padding: 30px 50px;
     border-radius: 10px;
     text-align: center;
-    transform: scale(0); /* começa pequeno */
+    transform: scale(0); 
     animation: popup 0.5s forwards;
 }
 
-/* Animação de popup */
 @keyframes popup {
     from { transform: scale(0); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Botão fechar */
 #btn-fechar-modal {
     margin-top: 20px;
     padding: 8px 20px;
@@ -234,16 +255,6 @@ header nav a:hover {
     background-color: #009acd;
 }
 
-
-
-
-
-<<<<<<< HEAD
-/* ===========================
-    RESPONSIVIDADE
-=========================== */
-
-/* Telas entre 1024px e 900px */
 @media (max-width: 1024px) {
 
     #campo-login {
@@ -294,11 +305,8 @@ header nav a:hover {
     }
 }
 
-/* Telas até 768px – quebra principal */
-/* Telas até 768px – quebra principal */
 @media (max-width: 768px) {
 
-    /* Some apenas a parte azul */
     #div-esquerda {
         display: none;
     }
@@ -317,12 +325,11 @@ header nav a:hover {
 
         display: flex;
         align-items: center;
-        justify-content: center; /* MENU NO CENTRO */
+        justify-content: center;
         background-color: #0045a7;
         z-index: 1000;
     }
 
-    /* LOGO fica fixa no canto esquerdo */
     #div-logo {
         position: absolute; 
         left: 15px; 
@@ -338,7 +345,6 @@ header nav a:hover {
         width: auto;
     }
 
-    /* Parte direita */
     #div-direita {
         width: 100%;
         padding-top: 12vh;
@@ -372,36 +378,3 @@ header nav a:hover {
 }
 
 }
-=======
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-
-    header nav ul {
-        gap: 10px;
-        text-align: center;
-        padding: 0;
-    }
-
-    #div-logo img {
-        width: 150px;
-    }
-
-    #campo-login {
-        width: 90%;
-    }
-
-    #div-esquerda h2 {
-        font-size: 20px;
-        padding: 0 20px;
-    }
-}
-
->>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181

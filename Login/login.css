@@ -1,0 +1,228 @@
+:root {
+    --branco: #ffffff;
+    --preto: #000000;
+    --azulCobalto: #0047AB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azulCobalto);
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1.3em;
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+header nav a:hover {
+    opacity: 1;
+}
+
+#container {
+    background-color: var(--branco);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#div-esquerda {
+    background-color: var(--azulCobalto);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-esquerda h2 {
+    color: var(--branco);
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+#div-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 10vw;
+}
+
+#div-logo img {
+    width: 100%;
+    height: auto;
+}
+
+#div-direita {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+#lbl-login {
+    color: var(--azulCobalto);
+    font-size: 2em;
+    margin-top: 5%;
+}
+
+#campo-login {
+    width: 23vw;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgb(189, 189, 189);
+    padding: 30px 0;
+}
+
+.div-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#input-usuario,
+#input-senha {
+    width: 15vw;
+    height: 4vh;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 0px 0px 10px rgb(168, 168, 168);
+    border: none;
+}
+
+#input-usuario:focus,
+#input-senha:focus {
+    box-shadow: 0px 0px 7px var(--azulCobalto);
+    outline: none;
+}
+
+#input-usuario::placeholder,
+#input-senha::placeholder {
+    color: #5b8aff;
+    letter-spacing: 1px;
+}
+
+#div-btnConfirmar {
+    margin-top: 10%;
+}
+
+#btn-login {
+    height: 5vh;
+    width: 8vw;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--azulCobalto);
+    color: var(--branco);
+    font-size: 1.1em;
+    transition: ease-in-out 0.3s;
+}
+
+#btn-login:hover {
+    transform: scale(1.01);
+    background-color: rgb(0, 106, 255);
+    cursor: pointer;
+}
+
+
+#link-cadastro {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+#link-cadastro a {
+    color: var(--azulCobalto);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#link-cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+#aviso-erro {
+    position: fixed;
+    top: -80px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: 2000;
+}
+
+#aviso-erro.mostrar {
+    top: 20px;          
+    opacity: 1;        
+}
+
+
+@media (max-width: 768px) {
+    #div-esquerda {
+        display: none;
+    }
+
+    #container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #div-direita {
+        width: 100%;
+        padding-top: 12vh;
+        min-height: 100vh;
+    }
+
+    #campo-login {
+        width: 60vw;
+        padding: 40px 0;
+    }
+
+    #input-usuario,
+    #input-senha {
+        width: 45vw;
+        height: 5vh;
+    }
+
+    #btn-login {
+        width: 30vw;
+        height: 5vh;
+    }
+}

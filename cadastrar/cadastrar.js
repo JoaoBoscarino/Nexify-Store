@@ -1,27 +1,33 @@
 document.getElementById("form-cadastro").addEventListener("submit", function (event) {
-    event.preventDefault(); // impede que o form recarregue a página
+    event.preventDefault();
 
     const usuario = document.getElementById("input-usuario").value.trim();
     const senha = document.getElementById("input-senha").value;
     const confirmarSenha = document.getElementById("input-confirmarSenha").value;
 
+    const avisoErro = document.getElementById("aviso-erro");
 
     if (senha !== confirmarSenha) {
-        alert("As senhas não coincidem!");
+
+        avisoErro.style.display = "block";
+        avisoErro.textContent = "As senhas não coincidem!";
+
+        setTimeout(() => {
+            avisoErro.style.display = "none";
+        }, 3000);
+
         return;
     }
 
-    // salva os dados no localStorage
+
     localStorage.setItem("usuario", usuario);
     localStorage.setItem("senha", senha.trim());
 
-    // exibe o modal de sucesso
     const modal = document.getElementById("modal-sucesso");
-    modal.style.display = "flex"; // mostra o modal
+    modal.style.display = "flex";
 
-    // adiciona evento para o botão de fechar modal
     document.getElementById("btn-fechar-modal").addEventListener("click", function () {
-        modal.style.display = "none";       // esconde o modal
-        window.location.href = "../index.html"; // redireciona para o index
+        modal.style.display = "none";
+        window.location.href = "../index.html";
     });
 });

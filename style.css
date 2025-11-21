@@ -250,12 +250,8 @@ footer p {
     text-align: center;
 }
 
-/* ==========================================
-   RESPONSIVIDADE — APENAS UM @media
-   ========================================== */
 @media (max-width: 768px) {
 
-    /* HEADER */
     #input-pesquisa {
         display: none;
     }
@@ -290,7 +286,6 @@ footer p {
         right: -8px !important;
     }
 
-    /* MENU */
     #menu-opcoes {
         gap: 20px;
         font-size: .9rem;
@@ -299,14 +294,13 @@ footer p {
         flex-wrap: wrap;
     }
 
-    /* TÍTULOS */
+   
     .titulo-secao {
         font-size: 22px;
         text-align: center;
         margin-top: 25px;
     }
 
-    /* CARDS */
     .cards-container {
         gap: 15px;
         padding: 0 10px;
@@ -333,7 +327,7 @@ footer p {
         font-size: 14px;
     }
 
-    /* FOOTER */
+
     footer .footer-conteudo {
         flex-direction: column;
         gap: 25px;

@@ -1,4 +1,3 @@
-// ELEMENTOS
 const btnFinalizar = document.getElementById('btn-finalizar');
 const resumoContainer = document.querySelector('.resumo');
 const totalElement = document.querySelector('.footer-checkout p strong');
@@ -6,7 +5,6 @@ const formInputs = document.querySelectorAll('input[required]');
 const overlay = document.getElementById("animacao-pedido");
 const caminhao = document.querySelector(".caminhao");
 
-// CRIAR MODAL DO QR CODE
 let qrModal = document.createElement('div');
 qrModal.id = 'qr-modal';
 qrModal.innerHTML = `
@@ -20,7 +18,6 @@ qrModal.innerHTML = `
 `;
 document.body.appendChild(qrModal);
 
-// FUNÇÃO PARA CARREGAR CARRINHO
 function carregarCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     resumoContainer.innerHTML = '';
@@ -38,21 +35,19 @@ function carregarCarrinho() {
 }
 
 
-
-// MOSTRAR IMAGEM DO QR CODE
 function mostrarQRCode() {
     const qrImage = document.getElementById('qr-code');
-    qrImage.src = '../img-card/qrcode-pix.png'; // <-- troque para o caminho da sua imagem do QR Code
+    qrImage.src = '../img-card/qrcode-pix.png';
     qrModal.style.display = 'flex';
 }
 
-// FINALIZAR COMPRA (ABRIR MODAL QR)
+
 function finalizarCompra() {
     const form = document.getElementById('form-checkout');
 
-    // validação nativa
+
     if (!form.checkValidity()) {
-        form.reportValidity(); // mostra a mensagem
+        form.reportValidity(); 
         return;
     }
 
@@ -64,12 +59,9 @@ function finalizarCompra() {
     mostrarQRCode();
 }
 
-
-// EVENTOS
 document.addEventListener('DOMContentLoaded', carregarCarrinho);
 btnFinalizar.addEventListener('click', finalizarCompra);
 
-// BOTÕES DO MODAL
 document.getElementById('btn-voltar').addEventListener('click', () => {
     qrModal.style.display = 'none';
 });
@@ -77,17 +69,14 @@ document.getElementById('btn-voltar').addEventListener('click', () => {
 document.getElementById('btn-finalizar-pagamento').addEventListener('click', () => {
     qrModal.style.display = 'none';
 
-    // LIMPAR CARRINHO
     localStorage.removeItem('carrinho');
-    carregarCarrinho(); // atualiza visualmente o resumo
+    carregarCarrinho(); 
 
-    // INICIAR ANIMAÇÃO
     overlay.style.display = 'flex';
     overlay.classList.add("ativo");
     caminhao.classList.add("animar");
 
-    // REDIRECIONAR APÓS A ANIMAÇÃO
     setTimeout(() => {
         window.location.href = "../index.html";
-    }, 3400); // dura 3.4s conforme animação do caminhão
+    }, 3400);
 });

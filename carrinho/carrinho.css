@@ -339,42 +339,43 @@ header #div-titulo-loja {
 }
 
 
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181
+/* ===== MEDIA QUERY ATÉ 768px ===== */
 @media (max-width: 768px) {
 
     /* HEADER */
     header {
-<<<<<<< HEAD
-        height: auto;
-        padding: 15px 0;
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        height: auto;
+        padding: 15px 0;
     }
 
-    header #div-logo-loja {
-        margin-right: 0;
+    #div-logo-loja {
         position: static;
+        margin: 0;
     }
 
-    /* CONTAINER */
+    #div-logo-loja img {
+        width: 80px;
+        height: 100px;
+    }
+
+    #div-titulo-loja {
+        font-size: 1.3rem;
+    }
+
+    /* CONTAINER PRINCIPAL */
     #container {
-        padding-bottom: 12vh;
+        padding-bottom: 12vh; /* garante espaço pro menu fixo */
+        flex-direction: column;
     }
 
     /* PRODUTOS NO CARRINHO */
     #info-produto {
         width: 95%;
-        padding: 20px;
-        margin-bottom: 13vh;
+        padding: 15px;
+        margin-bottom: 12vh;
     }
 
     .item-carrinho {
@@ -384,62 +385,19 @@ header #div-titulo-loja {
     }
 
     .item-carrinho img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .item-carrinho p {
-        margin: 0;
-        font-size: 1.1rem;
-    }
-
-    /* Controle de quantidade no mobile */
-    .controle-qtd {
-        padding: 8px 14px;
-        gap: 15px;
-    }
-
-    .controle-qtd button {
-        width: 38px;
-        height: 38px;
-        font-size: 1.3rem;
-    }
-
-    /* MENU INFERIOR */
-    #menu-embaixo {
-        flex-direction: row;
-        height: auto;
-        padding: 15px;
-        gap: 12px;
-        text-align: center;
-    }
-
-    .lbl-menu {
-        font-size: 1.3rem;
-    }
-
-    .btnConfirmar {
-        width: 100%;
-        padding: 16px;
-        font-size: 1.1rem;
-    }
-
-}
-
-
-@media (max-width: 480px) {
-
-    header #div-titulo-loja {
-        font-size: 1.2rem;
-    }
-
-    .item-carrinho img {
         width: 100px;
         height: 100px;
     }
 
     .item-carrinho p {
+        margin: 0;
         font-size: 1rem;
+    }
+
+    /* CONTROLE DE QUANTIDADE */
+    .controle-qtd {
+        padding: 8px 14px;
+        gap: 15px;
     }
 
     .controle-qtd button {
@@ -448,65 +406,30 @@ header #div-titulo-loja {
         font-size: 1.1rem;
     }
 
-    .btnConfirmar {
-        padding: 14px;
-        font-size: 1rem;
-    }
-
-     #menu-embaixo {
-        flex-direction: column;
-        height: 140px;
-        padding: 15px;
-        gap: 12px;
-        text-align: center;
-    }
-}
-
-=======
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    #div-logo-loja img {
-        width: 150px;
-    }
-
-    #div-titulo-loja h1 {
-        font-size: 22px;
-    }
-
-    /* CONTAINER PRINCIPAL */
-    #container {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    /* PRODUTOS */
-    #info-produto {
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* MENU FIXO EMBAIXO */
+    /* MENU INFERIOR - CORRIGIDO */
     #menu-embaixo {
-       
-        gap: 10px;
-        text-align: center;
-        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10vh; /* manter altura constante */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+        border-top: 2px solid rgba(255, 255, 255, 0.15);
+        background: linear-gradient(90deg, var(--azulCobalto--), #003b90);
     }
 
-    .div-qtdItens,
-    .div-lblTotal,
-    .div-btnConfirmar {
-        width: 100%;
-        justify-content: center;
+    .lbl-menu {
+        font-size: 1.2rem;
     }
 
     .btnConfirmar {
-        width: 90%;
-        font-size: 18px;
-        padding: 12px;
+        width: auto; /* deixa o botão se ajustar */
+        padding: 14px 24px;
+        font-size: 1rem;
     }
 
     /* MODAIS */
@@ -524,4 +447,78 @@ header #div-titulo-loja {
         width: 100%;
     }
 }
->>>>>>> 1b9cf3a92a2af0b1a8c1fd30a8ecff4249bbf181
+
+
+/* ===== MEDIA QUERY ATÉ 468px ===== */
+@media (max-width: 468px) {
+
+    #div-logo-loja img {
+       width: 80px;
+       margin-left: 30px;
+    }
+
+    #div-titulo-loja {
+        font-size: 1.15rem;
+    }
+
+    #info-produto {
+        width: 98%;
+        padding: 12px;
+        margin-bottom: 14vh; /* espaço extra pro footer */
+    }
+
+    .item-carrinho img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .item-carrinho p {
+        font-size: 1rem;
+    }
+
+    .controle-qtd {
+        padding: 7px 12px;
+        gap: 12px;
+    }
+
+    .controle-qtd button {
+        width: 30px;
+        height: 30px;
+        font-size: 1.05rem;
+    }
+
+    /* MENU INFERIOR - empilha só em telas muito pequenas */
+    #menu-embaixo {
+        flex-direction: column;
+        height: auto;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .lbl-menu {
+        font-size: 1rem;
+    }
+
+    .btnConfirmar {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* MODAIS */
+    .modal-content {
+        width: 92%;
+        padding: 18px;
+    }
+
+    .modal-buttons {
+        gap: 9px;
+    }
+
+    button {
+        font-size: 0.95rem;
+    }
+}
+
+
+

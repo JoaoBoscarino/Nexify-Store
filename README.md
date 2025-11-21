@@ -1,7 +1,7 @@
 # Loja de Roupas
 
 ## Descrição do Projeto
-Este projeto é um **site de uma loja de roupas**, desenvolvido com **HTML, CSS, JavaScript e Tailwind CSS**.  
+Este projeto é um **site de uma loja de roupas**, desenvolvido com **HTML, CSS, JavaScript**.  
 O objetivo é criar uma experiência de compra simples, moderna e responsiva, permitindo que os usuários naveguem pelos produtos, adicionem itens ao carrinho e finalizem suas compras.
 
 ---
@@ -20,6 +20,6 @@ O objetivo é criar uma experiência de compra simples, moderna e responsiva, pe
 - Adição de produtos ao carrinho  
 - Controle da quantidade de cada produto no carrinho  
 - Cálculo do valor total da compra  
-- Design responsivo usando Tailwind CSS  
+- Design responsivo
 
 

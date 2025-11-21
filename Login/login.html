@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img-icon/logo-icon-transparent.png" type="image/x-icon">
-    <link rel="stylesheet" href="cadastrar.css">
-    <title>Nexify Store</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Nexify Store - Login</title>
 </head>
 
 <body>
@@ -19,36 +19,25 @@
                     <li><a href="../index.html">Início</a></li>
                     <li><a href="#">Produtos</a></li>
                     <li><a href="../sobre/sobre.html">Sobre Nós</a></li>
-                    <li><a
-                            href="https://wa.me/5521972903161?text=Ol%C3%A1%2C%20estou%20com%20uma%20d%C3%BAvida">Contato</a>
-                    </li>
+                    <li><a href="https://wa.me/5521972903161?text=Ol%C3%A1%2C%20estou%20com%20uma%20d%C3%BAvida">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div id="aviso-erro"><span></span></div>
+
+
     <div id="container">
         <div id="div-esquerda">
-
-            <h2>Roupas modernas e de qualidade. <br> Confira nossas novidades!</h2>
+            <h2>Bem-vindo de volta! <br> Faça login para continuar.</h2>
         </div>
 
         <div id="div-direita">
             <div id="campo-login">
-                <div id="lbl-login">Cadastro</div>
+                <div id="lbl-login">Login</div>
 
-                <form id="form-cadastro">
-
-                    <div id="modal-sucesso" class="modal">
-                        <div class="modal-content">
-                            <h2>Cadastro realizado com sucesso!</h2>
-                            <button id="btn-fechar-modal">Fechar</button>
-                        </div>
-                    </div>
-
-                    <p id="aviso-erro" style="display:none;">As senhas não coincidem!</p>
-
-
+                <form id="form-login">
                     <div class="div-inputs">
                         <input type="text" id="input-usuario" name="username" placeholder="Usuário" required>
                     </div>
@@ -57,29 +46,18 @@
                         <input type="password" id="input-senha" name="password" placeholder="Senha" required>
                     </div>
 
-                    <div class="div-inputs">
-                        <input type="password" id="input-confirmarSenha" name="password" placeholder="Confirmar Senha"
-                            required>
-                    </div>
-
                     <div id="div-btnConfirmar">
-                        <button id="btn-confirmar" type="submit">Cadastrar</button>
+                        <button id="btn-login" type="submit">Entrar</button>
                     </div>
 
-                    <p id="link-cadastro">Já tem uma conta? <a href="../Login/login.html">Faça login</a></p>
-
-
-
+                    <p id="link-cadastro">Não tem cadastro? <a href="../Cadastrar/cadastrar.html">Criar conta</a></p>
 
                 </form>
-
-
             </div>
         </div>
-
-
     </div>
-    <script src="cadastrar.js"></script>
+
+    <script src="login.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,14 @@
-const usuario = localStorage.getItem("usuario");
+const usuario = localStorage.getItem("usuarioLogado");
 const linkPerfil = document.getElementById("link-perfil");
 
 
 if (usuario) {
     linkPerfil.outerHTML = `<span id="user-container">${usuario} <button id="btn-sair">Sair</button></span>`;
 
-    document.getElementById("btn-sair").addEventListener("click", function() {
-        localStorage.removeItem("usuario");
-        localStorage.removeItem("senha");
+    document.getElementById("btn-sair").addEventListener("click", function () {
+        localStorage.removeItem("usuarioLogado");
         window.location.reload();
+
     });
 }
 
@@ -22,10 +22,10 @@ function atualizarBadge() {
         totalItens += item.quantidade;
     });
 
-    if(badge) badge.textContent = totalItens;
+    if (badge) badge.textContent = totalItens;
 }
 
-// Adicionar produtos ao carrinho
+
 const botaoAdicionar = document.querySelectorAll(".btn-confirmar");
 
 botaoAdicionar.forEach((botao) => {
@@ -33,7 +33,7 @@ botaoAdicionar.forEach((botao) => {
         const produto = botao.parentElement;
         const nome = produto.querySelector(".lbl-produto").textContent;
         const valor = produto.querySelector(".lbl-valor").textContent;
-        const imagem  = produto.querySelector("img").src;
+        const imagem = produto.querySelector("img").src;
 
         let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -58,7 +58,7 @@ atualizarBadge();
 
 const inputPesquisa = document.getElementById("input-pesquisa");
 
-inputPesquisa.addEventListener("keyup", () =>{
+inputPesquisa.addEventListener("keyup", () => {
 
     const filtro = inputPesquisa.value.toLowerCase();
     const produtos = document.querySelectorAll(".card");
@@ -66,7 +66,7 @@ inputPesquisa.addEventListener("keyup", () =>{
     produtos.forEach((produto) => {
         const nomeProduto = produto.querySelector(".lbl-produto").textContent.toLowerCase();
 
-        if(nomeProduto.includes(filtro)){
+        if (nomeProduto.includes(filtro)) {
             produto.style.display = "";
         } else {
             produto.style.display = "none";
